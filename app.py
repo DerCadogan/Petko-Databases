@@ -38,7 +38,7 @@ def index():
 
     else:
         #Page_FirstName = UserTable.query.order_by(FirstName.date_created).first()         
-        return render_template('index.html')
+        return render_template('UserProfile.html')
 
 
 @app.route('/delete/<int:id>')
