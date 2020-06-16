@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<style>
+    .bg {
+            
+        background-image: url("/static/Images/Queens.jpg");
+        
+        /* Full height */
+        height: 94%;
+        
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        }
+    
+    
+    .EventTable{
+        margin-top: 70px;
+    }
+    
+    .TopText{
+        color: white;
+
+        
+    }
+
+    html, body {
+        margin: 0;
+        height: 100%;
+}
+
+    .TableHeader{
+        color:white;
+        font-size: larger;
+    }
+    
+    </style>
+
+
+
+{% endblock %}
+
+{% block body %}
+
+
+
+<div class="bg">
+    
+    <h1 style="text-align: center" class="TopText">Find Events in your Area!</h1>
+    
+    <div class = "row">
+        <div class = "col-sm-2">
+
+        </div>
+
+        <div class = "col-sm-8 EventTable">
+            <table>
+                <tr>
+                    <th class="TableHeader">Artist Name</th>
+                    <th class="TableHeader">Tour Name</th>
+                    <th class="TableHeader">Event Name</th>
+                    <th class="TableHeader">Date</th>
+                    <th class="TableHeader">Event Location</th>
+                    <th class="TableHeader">Genre</th>
+                    <th class="TableHeader">Pre Show Artist</th>
+                    <th class="TableHeader">Description</th>
+                    <th class="TableHeader">Buy</th>
+                </tr>
+            {% for Events in Eventtable %}        
+
+                <tr>
+                    <td>{Event.ArtistName}</td>
+                    <td>{Event.TourName}</td>
+                    <td>{Event.EventName}</td>
+                    <td>{Event.Date}</td>
+                    <td>{Event.Location}</td>
+                    <td>{Event.Genre}</td>
+                    <td>{Event.PreArtist}</td>
+                    <td>{Event.Desription}</td>
+                    <td><a href="">Get your Ticket</a></td>
+                </tr>
+            
+            </table>
+
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
