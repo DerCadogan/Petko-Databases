@@ -50,6 +50,8 @@
 
         </div>
 
+        {% for Events in Eventtable %}
+
         <div class="col-sm">
             <div class="card ArtistCard" style="width: 18rem;">
                 <img class="card-img-top" id="ArtistImage2" src= {ImageLink} alt="Card image cap">
@@ -62,7 +64,9 @@
             
         </div>
 
-        <div class="col-sm">
+        {%endfor%}
+
+        <!-- <div class="col-sm">
             <div class="card ArtistCard" style="width: 18rem;">
                 <img class="card-img-top" id="ArtistImage3" src={ImageLink} alt="Card image cap">
                 <div class="card-body">
@@ -109,7 +113,7 @@
                     </div>
                 </div>
             </div>
-        
+         -->
         
         </div>
     </div>
